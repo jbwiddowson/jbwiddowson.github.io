@@ -130,8 +130,32 @@
             <p>Here are some of the projects I've worked on and enjoyed the most:</p>
             <!-- Example Project -->
             <div class="project">
-                <h3>Project Title 1</h3>
-                <p>Description of your project. Explain what technologies you used and what the project does.</p>
+                <h3>Home SOC Lab – Detection & Incident Response</h3> 
+                <p> Built a simulated Security Operations Center (SOC) environment to generate, detect, and investigate cyber attacks using Splunk and Sysmon. This project demonstrates hands-on experience with SIEM monitoring, threat detection, and incident response workflows. </p> 
+                <p><strong>Tools:</strong> Splunk, Sysmon, Kali Linux, Wireshark, VirtualBox</p> 
+                <h4>Key Features</h4> 
+                <ul> <li>Simulated real-world attacks (port scanning, brute force, PowerShell abuse)</li> 
+                    <li>Created custom detection queries and alerts in Splunk</li> 
+                    <li>Performed incident investigation with timeline analysis</li> 
+                    <li>Documented response actions and mitigation strategies</li> </ul> 
+                <h4> Lab Setup</h4> 
+                <ul> <li><strong>Attacker:</strong> Kali Linux</li> 
+                    <li><strong>Target:</strong> Windows 10 (Sysmon enabled)</li> 
+                    <li><strong>SIEM:</strong> Splunk (Ubuntu)</li> </ul> <img src="images/soc-architecture.png" alt="SOC Lab Architecture"> 
+                <h4>Attack Simulation</h4> 
+                <ul> <li><strong>Port Scan:</strong> Identified open ports using Nmap</li> 
+                    <li><strong>Brute Force:</strong> Simulated repeated login attempts</li> 
+                    <li><strong>PowerShell Abuse:</strong> Executed encoded commands</li> </ul> <img src="images/attack-example.png" alt="Attack Simulation"> 
+                <h4>Detection</h4> 
+                    <p><strong>Failed Login Detection:</strong></p> <pre>index=wineventlog EventCode=4625</pre> 
+                <p><strong>PowerShell Detection:</strong></p> <pre>EventCode=4104</pre> <img src="images/splunk-alert.png" alt="Splunk Detection"> 
+                <h4>Investigation</h4> <ul> <li>Identified attacker IP and targeted account</li> 
+                    <li>Correlated failed and successful login events</li> 
+                    <li>Built timeline of attacker activity</li> </ul> 
+                <h4>Incident Response</h4> 
+                <ul> <li>Recommended password reset and MFA enforcement</li> <li>Suggested blocking attacker IP</li> 
+                    <li>Outlined containment and remediation steps</li> </ul>
+        </section>
                 <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
             </div>
             <div class="project">
