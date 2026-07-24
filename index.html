@@ -130,38 +130,133 @@
             <p>Here are some of the projects I've worked on and enjoyed the most:</p>
             <!-- Example Project -->
             <div class="project">
-                <h3>Home SOC Lab – Detection & Incident Response</h3> 
-                <p> Built a simulated Security Operations Center (SOC) environment to generate, detect, and investigate cyber attacks using Splunk and Sysmon. This project demonstrates hands-on experience with SIEM monitoring, threat detection, and incident response workflows. </p> 
-                <p><strong>Tools:</strong> Splunk, Sysmon, Kali Linux, Wireshark, VirtualBox</p> 
-                <h4>Key Features</h4> 
-                <ul> <li>Simulated real-world attacks (port scanning, brute force, PowerShell abuse)</li> 
-                    <li>Created custom detection queries and alerts in Splunk</li> 
-                    <li>Performed incident investigation with timeline analysis</li> 
-                    <li>Documented response actions and mitigation strategies</li> </ul> 
-                <h4> Lab Setup</h4> 
-                <ul> <li><strong>Attacker:</strong> Kali Linux</li> 
-                    <li><strong>Target:</strong> Windows 10 (Sysmon enabled)</li> 
-                    <li><strong>SIEM:</strong> Splunk (Ubuntu)</li> </ul> <img src="soc-architecture.png" alt="SOC Lab Architecture"> 
-                <h4>Attack Simulation</h4> 
-                <ul> <li><strong>Port Scan:</strong> Identified open ports using Nmap</li> 
-                    <li><strong>Brute Force:</strong> Simulated repeated login attempts</li> 
-                    <li><strong>PowerShell Abuse:</strong> Executed encoded commands</li> </ul> <img src="images/attack-example.png" alt="Attack Simulation"> 
-                <h4>Detection</h4> 
-                    <p><strong>Failed Login Detection:</strong></p> <pre>index=wineventlog EventCode=4625</pre> 
-                <p><strong>PowerShell Detection:</strong></p> <pre>EventCode=4104</pre> <img src="images/splunk-alert.png" alt="Splunk Detection"> 
-                <h4>Investigation</h4> <ul> <li>Identified attacker IP and targeted account</li> 
-                    <li>Correlated failed and successful login events</li> 
-                    <li>Built timeline of attacker activity</li> </ul> 
-                <h4>Incident Response</h4> 
-                <ul> <li>Recommended password reset and MFA enforcement</li> <li>Suggested blocking attacker IP</li> 
-                    <li>Outlined containment and remediation steps</li> </ul>
-        </section>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
+
+    <h3>Enterprise Cybersecurity Home Lab</h3>
+
+    <p>
+        Designed and built a fully virtualized enterprise network to simulate a real-world business environment.
+        This home lab serves as the foundation for all cybersecurity projects, including Active Directory,
+        SIEM monitoring, vulnerability management, threat hunting, incident response, and penetration testing.
+    </p>
+
+    <p>
+        <strong>Tools:</strong> Proxmox VE, Windows Server 2022, Windows 11, Ubuntu Server,
+        Kali Linux, pfSense, Splunk Enterprise, Security Onion, Wireshark,
+        OpenVAS, Docker, Sysmon
+    </p>
+
+    <h4>Project Goals</h4>
+
+    <ul>
+        <li>Build an enterprise-style virtual infrastructure</li>
+        <li>Deploy a Windows Active Directory domain</li>
+        <li>Create secure virtual networking and firewall segmentation</li>
+        <li>Centralize log collection using Splunk</li>
+        <li>Generate realistic attack scenarios for detection and analysis</li>
+        <li>Develop a reusable environment for future cybersecurity labs</li>
+    </ul>
+
+    <h4>Infrastructure</h4>
+
+    <ul>
+        <li><strong>Hypervisor:</strong> Proxmox VE</li>
+        <li><strong>Domain Controller:</strong> Windows Server 2022</li>
+        <li><strong>Client Systems:</strong> Windows 11 & Ubuntu</li>
+        <li><strong>Firewall:</strong> pfSense</li>
+        <li><strong>SIEM:</strong> Splunk Enterprise</li>
+        <li><strong>Network Security:</strong> Security Onion</li>
+        <li><strong>Attacker:</strong> Kali Linux</li>
+        <li><strong>Vulnerability Scanner:</strong> OpenVAS</li>
+    </ul>
+
+    <img src="images/enterprise-network-diagram.png" alt="Enterprise Home Lab Diagram">
+
+    <h4>Build Process</h4>
+
+    <ul>
+        <li>Installed and configured Proxmox on a dedicated rack server</li>
+        <li>Created isolated virtual networks and VLANs</li>
+        <li>Deployed Windows Server and promoted it to a Domain Controller</li>
+        <li>Configured Active Directory, DNS, DHCP, and Group Policy</li>
+        <li>Added Windows and Linux client systems to the domain</li>
+        <li>Installed pfSense to control and monitor network traffic</li>
+        <li>Configured centralized logging with Splunk</li>
+        <li>Integrated Security Onion for IDS and network monitoring</li>
+    </ul>
+
+    <img src="images/proxmox-dashboard.png" alt="Proxmox Dashboard">
+
+    <h4>Security Features</h4>
+
+    <ul>
+        <li>Active Directory user and group management</li>
+        <li>Group Policy security hardening</li>
+        <li>Password complexity and account lockout policies</li>
+        <li>Windows Firewall configuration</li>
+        <li>Sysmon endpoint logging</li>
+        <li>Network segmentation using pfSense</li>
+        <li>Centralized event logging with Splunk</li>
+    </ul>
+
+    <img src="images/ad-users.png" alt="Active Directory">
+
+    <h4>Cybersecurity Labs Built on This Environment</h4>
+
+    <ul>
+        <li>Active Directory Administration</li>
+        <li>Splunk SIEM Monitoring</li>
+        <li>Threat Hunting</li>
+        <li>Incident Response</li>
+        <li>Windows Event Log Analysis</li>
+        <li>Security Onion Monitoring</li>
+        <li>Vulnerability Management</li>
+        <li>Network Traffic Analysis</li>
+        <li>Penetration Testing</li>
+        <li>Malware Analysis</li>
+    </ul>
+
+    <img src="images/splunk-dashboard.png" alt="Splunk Dashboard">
+
+    <h4>Skills Demonstrated</h4>
+
+    <ul>
+        <li>Enterprise Network Design</li>
+        <li>Virtualization</li>
+        <li>Windows Server Administration</li>
+        <li>Active Directory</li>
+        <li>DNS & DHCP</li>
+        <li>Linux Administration</li>
+        <li>Firewall Administration</li>
+        <li>SIEM Deployment</li>
+        <li>Threat Detection</li>
+        <li>Incident Response</li>
+        <li>Log Analysis</li>
+        <li>Network Security</li>
+        <li>Vulnerability Management</li>
+        <li>System Hardening</li>
+        <li>Technical Documentation</li>
+    </ul>
+
+    <h4>Future Enhancements</h4>
+
+    <ul>
+        <li>Microsoft Sentinel integration</li>
+        <li>Microsoft Entra ID hybrid environment</li>
+        <li>Wazuh deployment</li>
+        <li>Velociraptor endpoint monitoring</li>
+        <li>Docker security testing</li>
+        <li>Automated SOAR workflows</li>
+    </ul>
+
+    <a href="https://github.com/yourusername/enterprise-home-lab" target="_blank">
+        View Project on GitHub
+    </a>
+
+</div>
             <div class="project">
                 <h3>Project Title 2</h3>
                 <p>Description of your project. Explain what technologies you used and what the project does.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
             </div>
             <!-- Add more projects here -->
         </section>
